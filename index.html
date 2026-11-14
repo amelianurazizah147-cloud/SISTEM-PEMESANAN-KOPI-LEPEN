@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasir Kedai Kopi Lepen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+ <div class="brand-mark">
+    <img src="img/WhatsApp Image 2026-11-14 at 11.31.03.jpeg" alt="Logo Kedai Kopi Lepen">
+</div>
+    <h1>Kedai Kopi Lepen</h1>
+    <p>Sistem Pemesanan & Kasir</p>
+  </div>
+  <div class="status">● Sistem Kasir</div>
+</header>
+
+<main class="app-layout">
+
+  <section class="catalog">
+    <div class="welcome">
+      <p>SELAMAT DATANG</p>
+      <h2>Mau pesan apa hari ini?</h2>
+      <span>Pilih menu favorit Anda.</span>
+    </div>
+
+    <div class="search-wrap">
+      <input type="search" id="searchInput"
+        placeholder="Cari nama menu...">
+    </div>
+
+    <nav id="categoryNav">
+      <button class="category-btn active" data-category="Semua">Semua Menu</button>
+      <button class="category-btn" data-category="Minuman Dingin & Juice">Minuman Dingin & Juice</button>
+      <button class="category-btn" data-category="Minuman Panas">Minuman Panas</button>
+      <button class="category-btn" data-category="Menu Utama">Menu Utama</button>
+      <button class="category-btn" data-category="Camilan">Camilan</button>
+      <button class="category-btn" data-category="Paket Hemat">Paket Hemat</button>
+    </nav>
+
+    <div class="catalog-heading">
+      <h3 id="catalogTitle">Semua Menu</h3>
+      <span id="menuCount"></span>
+    </div>
+
+    <div id="menuGrid" class="menu-grid"></div>
+
+    <div id="emptyState" class="empty-state hidden">
+      <h3>Menu tidak ditemukan</h3>
+      <p>Coba kata kunci lainnya.</p>
+    </div>
+  </section>
+
+  <aside class="order-panel">
+
+    <div class="order-header">
+      <div>
+        <p>TRANSAKSI BARU</p>
+        <h2>Pesanan</h2>
+      </div>
+      <button id="newOrderBtn" class="text-button">Pesanan Baru ↻</button>
+    </div>
+
+    <label for="customerName">Nama Pelanggan</label>
+    <input id="customerName" class="text-field"
+      type="text" placeholder="Masukkan nama pelanggan">
+
+    <div class="cart-heading">
+      <h3>Daftar Pesanan</h3>
+      <span id="cartCount">0 item</span>
+    </div>
+
+    <div id="cartItems" class="cart-items">
+      <div class="cart-empty">
+        <h3>Belum ada pesanan</h3>
+        <p>Silakan pilih menu terlebih dahulu.</p>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div>
+        <span>Subtotal</span>
+        <strong id="subtotal">Rp0</strong>
+      </div>
+      <div class="total-row">
+        <span>Total Pembayaran</span>
+        <strong id="total">Rp0</strong>
+      </div>
+    </div>
+
+    <div class="payment-section">
+      <h3>Metode Pembayaran</h3>
+
+     <div class="payment-section">
+  <h3>Metode Pembayaran</h3>
+
+  <div class="payment-options">
+    <label class="payment-option selected">
+      <input type="radio" name="payment" value="Tunai" checked>
+      💵 Tunai
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="payment" value="QRIS">
+      ▦ QRIS
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="payment" value="Transfer">
+      🏦 Transfer
+    </label>
+  </div>
+
+  <!-- PILIHAN BANK -->
+  <div id="bankArea" class="bank-area hidden">
+    <label for="bankSelect">Pilih Bank</label>
+    <select id="bankSelect" class="text-field">
+      <option value="">-- Pilih Bank --</option>
+      <option value="Bank BRI">Bank BRI</option>
+      <option value="Bank BNI">Bank BNI</option>
+      <option value="Bank BCA">Bank BCA</option>
+      <option value="Bank Mandiri">Bank Mandiri</option>
+    </select>
+  </div>
+
+  <!-- PEMBAYARAN TUNAI -->
+  <div id="cashArea">
+    <label for="cashInput">Uang Diterima</label>
+    <input id="cashInput" class="text-field"
+      type="number" min="0"
+      placeholder="Masukkan nominal uang">
+
+    <div class="change-row">
+      <span>Kembalian</span>
+      <strong id="change">Rp0</strong>
+    </div>
+  </div>
+</div>
+        <div class="change-row">
+          <span>Kembalian</span>
+          <strong id="change">Rp0</strong>
+        </div>
+      </div>
+    </div>
+
+    <button id="checkoutBtn" class="checkout-btn" disabled>
+      Proses & Cetak Struk →
+    </button>
+
+  </aside>
+
+</main>
+
+<footer>
+  © 2026 Kedai Kopi Lepen | Sistem Kasir
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
